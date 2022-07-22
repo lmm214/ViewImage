@@ -10,6 +10,7 @@
  * https://tokinx.github.io/ViewImage/
  *
  * Copyright (c) 2017, biji.io
+ * 
  */
 (() => {
     window.ViewImage = new function () {
@@ -20,8 +21,9 @@
             const el = e.target.closest(_class);
             if (!el) return;
             const contain = el.closest('[view-image]') || document.body;
-            const images = [...contain.querySelectorAll(_class)].map(_ => _.href || _.src);
-            this.display(images, el.href || el.src);
+            //新增大图 _.dataset['zoomSrc']
+            const images = [...contain.querySelectorAll(_class)].map(_ => _.href || _.dataset['zoomSrc'] ||  _.src);
+            this.display(images, el.href || el.dataset['zoomSrc'] || el.src);
             e.stopPropagation();
             e.preventDefault();
         };
