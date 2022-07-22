@@ -2,7 +2,7 @@
  * ViewImage gzip compressed to just 2K, small and superb native Native JavaScript lightbox plugin
  *
  * @name ViewImage.js
- * @version 2.0.0
+ * @version 2.0.1
  * @author Tokinx
  * @license MIT License - http://www.opensource.org/licenses/mit-license.php
  *
